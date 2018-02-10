@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="Welcome to the BMI App!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -26,10 +26,13 @@
 
         <Button
             android:id="@+id/button"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:onClick="onClickEvent"
-            android:text="Next screen" />
+            android:text="Next screen"
+            android:textColorLink="@android:color/holo_blue_bright"
+            android:visibility="visible" />
 
         <TextView
             android:id="@+id/textView"
@@ -42,32 +45,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="Name"
+            android:inputType="textPersonName" />
 
         <EditText
             android:id="@+id/editText2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="date"
-            android:text="Date of birth" />
+            android:hint="Date of birth"
+            android:inputType="date" />
 
         <EditText
             android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:text="Health card number" />
+            android:hint="Health card number"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editText4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPassword"
-            android:text="Password" />
+            android:hint="Password"
+            android:inputType="textPassword" />
 
     </LinearLayout>
 

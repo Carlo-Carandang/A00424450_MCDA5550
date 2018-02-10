@@ -6,6 +6,7 @@ import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.EditText;
 
 public class Main2Activity extends AppCompatActivity {
 
@@ -24,6 +25,24 @@ public class Main2Activity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+
+        // gets the height
+        EditText height = (EditText) findViewById(R.id.editText10);
+        String value = height.getText().toString();
+        Double heightAsInt = Double.parseDouble(value);
+        System.out.println("Here is the height"+heightAsInt);
+
+        // Repeat for weight
+        EditText weight = (EditText) findViewById(R.id.editText11);
+        String value1 = weight.getText().toString();
+        Double weightAsInt = Double.parseDouble(value1);
+        System.out.println("Here is the weight"+weightAsInt);
+
+        double calc = (weightAsInt/(heightAsInt*heightAsInt));
+        EditText result = (EditText) findViewById(R.id.editText12);
+
+        // use DecimalFormat("0.##") to limit to 2 decimal places
+        result.setText((int) calc);
     }
 
 }
