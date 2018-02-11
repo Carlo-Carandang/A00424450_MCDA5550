@@ -18,16 +18,26 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:text="Height" />
+            android:hint="Height"
+            android:inputType="number" />
 
         <EditText
             android:id="@+id/editText11"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number"
-            android:text="Weight" />
+            android:hint="Weight"
+            android:inputType="number" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:id="@+id/button"
+            android:layout_row="8"
+            android:onClick="calculateBMI"
+            android:layout_column="2" />
+
 
         <EditText
             android:id="@+id/editText12"
@@ -35,6 +45,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="number" />
+
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

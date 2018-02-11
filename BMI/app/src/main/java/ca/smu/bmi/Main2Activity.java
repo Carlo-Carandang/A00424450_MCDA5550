@@ -10,6 +10,7 @@ import android.widget.EditText;
 
 public class Main2Activity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,29 +18,32 @@ public class Main2Activity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
-        });
+        }); */
+    }
 
+
+    public void calculateBMI(View view){
         // gets the height
-        EditText height = (EditText) findViewById(R.id.editText10);
+        EditText height = findViewById(R.id.editText10);
         String value = height.getText().toString();
         Double heightAsInt = Double.parseDouble(value);
         System.out.println("Here is the height"+heightAsInt);
 
         // Repeat for weight
-        EditText weight = (EditText) findViewById(R.id.editText11);
+        EditText weight = findViewById(R.id.editText11);
         String value1 = weight.getText().toString();
         Double weightAsInt = Double.parseDouble(value1);
         System.out.println("Here is the weight"+weightAsInt);
 
         double calc = (weightAsInt/(heightAsInt*heightAsInt));
-        EditText result = (EditText) findViewById(R.id.editText12);
+        EditText result = findViewById(R.id.editText12);
 
         // use DecimalFormat("0.##") to limit to 2 decimal places
         result.setText((int) calc);
