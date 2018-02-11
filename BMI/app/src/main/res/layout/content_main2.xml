@@ -14,35 +14,39 @@
         android:orientation="vertical">
 
         <EditText
-            android:id="@+id/editText10"
+            android:id="@+id/heightTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:hint="Height"
+            android:hint="Height in metres (m)"
             android:inputType="number" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/weightTxt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
-            android:hint="Weight"
+            android:hint=" in kilograms (kg)"
             android:inputType="number" />
 
         <Button
+            android:id="@+id/calcBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
-            android:id="@+id/button"
+            android:layout_column="2"
             android:layout_row="8"
+            android:background="#FFFF4081"
             android:onClick="calculateBMI"
-            android:layout_column="2" />
+            android:text="Calculate" />
 
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/totalTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="number" />
 
