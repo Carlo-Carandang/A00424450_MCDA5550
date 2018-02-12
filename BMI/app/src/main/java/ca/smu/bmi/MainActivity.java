@@ -9,14 +9,56 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.content.Intent;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    DatabaseHelper myDB;
+    Button loginBtn;
+    EditText nameTxt, dobTxt, healthcardTxt, passwordTxt;
+    Button btnView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+
+        nameTxt = findViewById(R.id.nameTxt);
+        dobTxt = findViewById(R.id.dobTxt);
+        healthcardTxt = findViewById(R.id.healthcardTxt);
+        passwordTxt = findViewById(R.id.passwordTxt);
+        loginBtn = findViewById(R.id.loginBtn);
+        btnView = findViewById(R.id.btnView);
+        myDB = new DatabaseHelper(this);
+
+       loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String newEntry = nameTxt.getText().toString();
+                if (nameTxt.length() != 0) {
+                    AddData(newEntry);
+                    nameTxt.setText(" ");
+
+                }
+                else {
+                    Toast.makeText(MainActivity.this, "You must put something in the text field!", Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+
+        btnView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, ListDataActivity.class);
+                startActivity(intent);
+            }
+        });
+
+
+
+/*        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
@@ -27,9 +69,20 @@ public class MainActivity extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+*/
     }
 
-    @Override
+    public void AddData(String newEntry) {
+        boolean insertData = myDB.addData(newEntry);
+
+        if (insertData==true){
+            Toast.makeText(MainActivity.this, "Successfully Entered Data!", Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(MainActivity.this, "Something went wrong :(", Toast.LENGTH_LONG).show();
+        }
+    }
+
+/*    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
@@ -50,10 +103,22 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+*/
 
-    public void onClickEvent(View view){
+/*    public void onClickEvent(View view){
         Intent intent = new Intent(this, Main2Activity.class);
         startActivity(intent);
+*/
+/*
+        Intent intent = new Intent(MainActivity.this, ListDataActivity.class);
+        startActivity(intent);
+
 
     }
+
+    public void onClick(View view) {
+        Intent intent = new Intent(this, ListDataActivity.class);
+        startActivity(intent);
+    }
+*/
 }

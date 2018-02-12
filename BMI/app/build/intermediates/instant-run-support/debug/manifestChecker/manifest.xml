@@ -32,6 +32,7 @@
             android:label="@string/title_activity_main2"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="ca.smu.bmi.BMIListActivity" />
+        <activity android:name="ca.smu.bmi.ListDataActivity" />
 
         <meta-data
             android:name="android.support.VERSION"
