@@ -15,23 +15,23 @@ import java.util.ArrayList;
 /**
  * Created by carlocarandang on 2018-02-11.
  */
-
+/*
 public class ListDataActivity extends AppCompatActivity {
 
-    DatabaseHelper myDB;
+    DatabaseHelper db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_layout);
-/*        mListView = (ListView) findViewById(R.id.listView);
+        mListView = (ListView) findViewById(R.id.listView);
         mDatabaseHelper = new DatabaseHelper(this);
-*/
+
         ListView listView = findViewById(R.id.listView);
-        myDB = new DatabaseHelper(this);
+        db = new DatabaseHelper(this);
 
         ArrayList<String> theList = new ArrayList<>();
-        Cursor data = myDB.getListContents();
+        Cursor data = db.getListContents();
 
         if(data.getCount() == 0){
             Toast.makeText(ListDataActivity.this, "The Database was empty.", Toast.LENGTH_LONG).show();
@@ -44,3 +44,4 @@ public class ListDataActivity extends AppCompatActivity {
         }
     }
 }
+*/
