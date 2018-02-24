@@ -25,6 +25,7 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BMIListActivity" />
         <activity android:name=".ListDataActivity" />
+        <activity android:name=".Login"></activity>
     </application>
 
 </manifest>

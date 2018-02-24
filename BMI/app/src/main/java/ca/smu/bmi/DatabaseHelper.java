@@ -32,21 +32,32 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 /*        String createTable = "CREATE TABLE" + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "NAME TEXT, " + "DOB DATE, " + "HEALTH_NUM TEXT, " + "PASSWORD TEXT)"; */
-        db.execSQL("Create table user(nameTxt text primary key,dobText date,healthcardTxt text,passwordTxt text)");
+        db.execSQL("drop table if exists user");
+        db.execSQL("drop table if exists record");
+        db.execSQL("Create table user(nameTxt text,dobText text,healthcardTxt text,passwordTxt text)");
+        db.execSQL("Create table record(nameTxt text,dateText text,heightTxt integer,weightTxt integer,BMI integer)");
 
 
         Date today = new Date(); // we want to start with some initial data
         ContentValues personValues = new ContentValues();
         personValues.put("nameTxt", "Carlo Carandang");
-        personValues.put("dobTxt", today.getTime());
+        personValues.put("dobTxt", "05/01/1990");
         personValues.put("healthcardTxt", "1234");
         personValues.put("passwordTxt", "qwerty");
         db.insert("user",null, personValues);
+        ContentValues recordValues = new ContentValues();
+        recordValues.put("nameTxt","Carlo Carandang");
+        recordValues.put("dateText","01/01/2018");
+        recordValues.put("heightTxt",2);
+        recordValues.put("weightTxt",70);
+        recordValues.put("BMI", 18);
+        db.insert("record", null, recordValues);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
         db.execSQL("drop table if exists user");
+        db.execSQL("drop table if exists record");
 /*        onCreate(db); */
     }
     //inserting into database
@@ -67,6 +78,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery("Select * from user where nameTxt=?",new String[]{nameTxt});
         if(cursor.getCount()>0) return false;
         else return true;
+    }
+    //check the email and password
+    public Boolean namepassword(String nameTxt, String passwordTxt){
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor cursor = db.rawQuery("select * from user where nameTxt=? and passwordTxt=?",new String[]{nameTxt,passwordTxt});
+        if(cursor.getCount()>0) return true;
+        else return false;
     }
 
 /*    public boolean addData(String name) {

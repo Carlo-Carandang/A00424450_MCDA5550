@@ -16,27 +16,35 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper db;
-    Button b1;
-    EditText e1 ,e2 ,e3, e4, e5;
+    Button b1, b2;
+    EditText e1, e2, e3, e4, e5;
 /*    Button btnView;
 */
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        db = new DatabaseHelper(this);
         e1 = findViewById(R.id.nameTxt);
         e2 = findViewById(R.id.dobTxt);
         e3 = findViewById(R.id.healthcardTxt);
         e4 = findViewById(R.id.passwordTxt);
         e5 = findViewById(R.id.cpasswordTxt);
-        b1 = findViewById(R.id.loginBtn);
-        db = new DatabaseHelper(this);
+        b1 = findViewById(R.id.registerBtn);
+        b2 = findViewById(R.id.loginBtn);
+        b2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClickEvent(View v) {
+                Intent i = new Intent(MainActivity.this,Login.class);
+                startActivity(i);
+            }
+        });
 
 /*        btnView = findViewById(R.id.btnView); */
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
+            public void onClick(View v) {
                 String s1 = e1.getText().toString();
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
@@ -51,10 +59,10 @@ public class MainActivity extends AppCompatActivity {
                         if (checkname == true) {
                             Boolean insert = db.insert(s1, s2, s3, s4);
                             if (insert == true) {
-                                Toast.makeText(getApplicationContext(), "Login Successful!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(), "Registration Successful!", Toast.LENGTH_SHORT).show();
                             }
                             else {
-                                Toast.makeText(getApplicationContext(),"Login Not Successful- Try Again", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getApplicationContext(),"Registration Not Successful- Try Again", Toast.LENGTH_SHORT).show();
                             }
                         }
                         else {
