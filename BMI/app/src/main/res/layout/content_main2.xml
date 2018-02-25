@@ -10,18 +10,18 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="286dp"
+        android:layout_height="344dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
+        tools:layout_editor_absoluteY="2dp">
 
 
         <EditText
-            android:id="@+id/editText3"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
+            android:selectAllOnFocus="false"
+            android:singleLine="false"
             android:text="BMI Calculation" />
 
         <EditText
@@ -67,6 +67,13 @@
             android:layout_gravity="center_horizontal"
             android:ems="10"
             android:inputType="numberDecimal" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFF4081"
+            android:text="View My BMI History" />
 
     </LinearLayout>
 

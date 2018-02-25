@@ -64,44 +64,27 @@ public class Main2Activity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Fields are empty",Toast.LENGTH_SHORT).show();
                 }
                 else {
-                    boolean ins = db.insertinrecord(r1,r2,r3,r4);
+                    Boolean ins = db.insertinrecord(r1,r2,r3,r4);
                     if(ins==true){
                         Toast.makeText(getApplicationContext(),"Successfully inserted into database",Toast.LENGTH_SHORT).show();
+                        if(r4<18.5){
+                            Toast.makeText(getApplicationContext(),"You are underweight: you need to gain weight",Toast.LENGTH_SHORT).show();
+                        }
+                        else if (r4>=18.5 && r4<25){
+                            Toast.makeText(getApplicationContext(),"You have normal weight: continue as you are",Toast.LENGTH_SHORT).show();
+                        }
+                        else if (r4>=25 && r4<30){
+                            Toast.makeText(getApplicationContext(),"You are overweight: lose some weight",Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(getApplicationContext(),"You are obese: please see your doctor",Toast.LENGTH_SHORT).show();
+                        }
                     }
                     else {
                         Toast.makeText(getApplicationContext(),"Not Inserted Into Database- Try Again", Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
-
- /*               Float heightTxt = Float.parseFloat(heightTxt.getText().toString());
-                Float weightTxt = Float.parseFloat(weightTxt.getText().toString());
-*/
-
             }
         });
     }
-
-
-/*    public void calculateBMI(View view){
-        // gets the height
-        EditText height = findViewById(R.id.editText10);
-        String value = height.getText().toString();
-        Double heightAsInt = Double.parseDouble(value);
-        System.out.println("Here is the height"+heightAsInt);
-
-        // Repeat for weight
-        EditText weight = findViewById(R.id.editText11);
-        String value1 = weight.getText().toString();
-        Double weightAsInt = Double.parseDouble(value1);
-        System.out.println("Here is the weight"+weightAsInt);
-
-        double calc = (weightAsInt/(heightAsInt*heightAsInt));
-        EditText result = findViewById(R.id.editText12);
-
-        // use DecimalFormat("0.##") to limit to 2 decimal places
-        result.setText((int) calc);
-    } */
-
 }

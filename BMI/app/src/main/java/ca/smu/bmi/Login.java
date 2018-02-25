@@ -13,7 +13,6 @@ public class Login extends AppCompatActivity {
     Button b1;
     DatabaseHelper db;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -38,5 +37,4 @@ public class Login extends AppCompatActivity {
             }
         });
     }
-
 }
