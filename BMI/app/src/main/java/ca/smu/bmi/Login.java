@@ -20,10 +20,10 @@ public class Login extends AppCompatActivity {
         db = new DatabaseHelper(this);
         e1 = findViewById(R.id.editText);
         e2 = findViewById(R.id.editText2);
-        b1 = findViewById(R.id.button);
-        b1.setOnClickListener(new View.OnClickListener() {
+        Button b1 = findViewById(R.id.button);
+        b1.setOnClickListener(new View.OnClickListener(){
             @Override
-            public void onClickEvent(View v) {
+            public void onClick(View view) {
                 String nameTxt = e1.getText().toString();
                 String passwordTxt = e2.getText().toString();
                 Boolean checknamepass = db.namepassword(nameTxt,passwordTxt);
@@ -34,4 +34,5 @@ public class Login extends AppCompatActivity {
             }
         });
     }
+
 }

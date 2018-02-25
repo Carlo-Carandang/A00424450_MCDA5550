@@ -7,111 +7,82 @@
     format="10"
     ir-eligibility="COMPATIBLE"
     plugin-version="3.0.1"
-    timestamp="1519502881822"
+    timestamp="1519521902220"
     token="-1146139600030468162"
     verifier="COLD_SWAP_REQUESTED" >
 
     <task
         name="javac"
-        duration="226" />
+        duration="288" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="43" />
+        duration="34" />
     <task
         name="verifier"
-        duration="5" />
+        duration="6" />
 
     <artifact
         location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
         type="SPLIT" />
+    <artifact
+        location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
+        type="SPLIT_MAIN" />
 
     <build
         build-mode="FULL"
-        timestamp="1519492586355"
-        verifier="COLD_SWAP_REQUESTED" >
+        timestamp="1519515240357"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
+            type="SPLIT" />
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/dep/dependencies.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
             type="SPLIT" />
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_2.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
             type="SPLIT" />
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
+            type="SPLIT" />
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
             type="SPLIT" />
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
             type="SPLIT" />
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_8.apk"
             type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
-    </build>
-    <build
-        build-mode="COLD"
-        ir-eligibility="CLASS_ADDED"
-        timestamp="1519497942475"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_3.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_1.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_4.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_0.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_5.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
-            type="SPLIT" />
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_9.apk"
-            type="SPLIT" />
-    </build>
-    <build
-        build-mode="COLD"
-        timestamp="1519498663068"
-        verifier="COLD_SWAP_REQUESTED" >
-        <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
-            type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
         ir-eligibility="COMPATIBLE"
-        timestamp="1519502881822"
+        timestamp="1519521902220"
         verifier="COLD_SWAP_REQUESTED" >
         <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
             type="SPLIT" />
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
+            type="SPLIT_MAIN" />
     </build>
 
 </instant-run>

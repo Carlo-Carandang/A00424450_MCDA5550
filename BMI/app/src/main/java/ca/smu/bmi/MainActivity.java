@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.ButtonBarLayout;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
@@ -30,13 +31,13 @@ public class MainActivity extends AppCompatActivity {
         e3 = findViewById(R.id.healthcardTxt);
         e4 = findViewById(R.id.passwordTxt);
         e5 = findViewById(R.id.cpasswordTxt);
-        b1 = findViewById(R.id.registerBtn);
-        b2 = findViewById(R.id.loginBtn);
+        Button b1 = findViewById(R.id.registerBtn);
+        Button b2 = findViewById(R.id.loginBtn);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClickEvent(View v) {
-                Intent i = new Intent(MainActivity.this,Login.class);
-                startActivity(i);
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this,Login.class);
+                startActivity(intent);
             }
         });
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
+            public void onClick(View view) {
                 String s1 = e1.getText().toString();
                 String s2 = e2.getText().toString();
                 String s3 = e3.getText().toString();
