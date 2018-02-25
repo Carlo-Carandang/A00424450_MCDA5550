@@ -33,7 +33,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Date today = new Date(); // we want to start with some initial data
         ContentValues personValues = new ContentValues();
         personValues.put("NAMETXT", "Carlo Carandang");
-/*        personValues.put("DOBTXT", "05/01/1990"); */
+        personValues.put("DOBTXT", "05/01/1990");
         personValues.put("HEALTHCARDTXT", "1234");
         personValues.put("PASSWORDTXT", "qwerty");
         db.insert("USER",null, personValues);
@@ -58,7 +58,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("NAMETXT",nameTxt);
-/*        contentValues.put("DOBTXT",dobTxt); */
+        contentValues.put("DOBTXT",dobTxt);
         contentValues.put("HEALTHCARDTXT",healthcardTxt);
         contentValues.put("PASSWORDTXT",passwordTxt);
         long ins = db.insert("user",null,contentValues);

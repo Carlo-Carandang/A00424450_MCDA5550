@@ -24,6 +24,10 @@ public class ListDataActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.list_layout);
+
+        BackGroundTask backGroundTask = new BackGroundTask(this);
+        backGroundTask.execute("get_info");
+
         mListView = (ListView) findViewById(R.id.listView);
         mDatabaseHelper = new DatabaseHelper(this);
 
