@@ -6,7 +6,7 @@
     density="420dpi"
     format="10"
     plugin-version="3.0.1"
-    timestamp="1519533719307"
+    timestamp="1519543745050"
     token="-1146139600030468162"
     verifier="COLD_SWAP_REQUESTED" >
 
@@ -91,15 +91,21 @@
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_7.apk"
             type="SPLIT" />
         <artifact
-            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
-            type="SPLIT" />
-        <artifact
             location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/outputs/apk/debug/app-debug.apk"
             type="SPLIT_MAIN" />
     </build>
     <build
         build-mode="COLD"
-        timestamp="1519533719307"
+        ir-eligibility="COMPATIBLE"
+        timestamp="1519543683407"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/split-apk/debug/slices/slice_6.apk"
+            type="SPLIT" />
+    </build>
+    <build
+        build-mode="COLD"
+        timestamp="1519543745050"
         verifier="COLD_SWAP_REQUESTED" />
 
 </instant-run>

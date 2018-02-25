@@ -53,10 +53,12 @@ public class Main2Activity extends AppCompatActivity {
                 Float calc = (weightAsInt/(heightAsInt*heightAsInt));
                 totalTextView.setText(Float.toString((float) calc));
 
-                String r1 = dateTxt.getText().toString();
-                Integer r2 = Integer.parseInt(heightTxt.getText().toString());
-                Integer r3 = Integer.parseInt(weightTxt.getText().toString());
-                Integer r4 = Integer.parseInt(totalTextView.getText().toString());
+                String r1;
+                r1 = dateTxt.getText().toString();
+                Float r2, r3, r4;
+                r2 = Float.parseFloat(heightTxt.getText().toString());
+                r3 = Float.parseFloat(weightTxt.getText().toString());
+                r4 = Float.parseFloat(totalTextView.getText().toString());
 
                 if(r1.equals("")||r2.equals("")||r3.equals("")){
                     Toast.makeText(getApplicationContext(),"Fields are empty",Toast.LENGTH_SHORT).show();

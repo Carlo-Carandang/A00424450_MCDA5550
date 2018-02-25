@@ -6,6 +6,7 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.FloatProperty;
 import android.util.Log;
 
 import java.util.Date;
@@ -24,8 +25,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public static final String COL4 = "HEALTH_NUM";
     public static final String COL5 = "PASSWORD";
 */
+    //to prevent create table errors, increase the database version
     public DatabaseHelper(Context context) {
-        super(context, "Login.db", null, 1);
+        super(context, "Login.db", null, 2);
     }
 
     @Override
@@ -34,9 +36,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 "NAME TEXT, " + "DOB DATE, " + "HEALTH_NUM TEXT, " + "PASSWORD TEXT)"; */
 /*        db.execSQL("drop table if exists user");
         db.execSQL("drop table if exists record"); */
-        db.execSQL("CREATE TABLE USER(NAMETXT TEXT PRIMARY KEY, DOBTXT TEXT, HEALTHCARDTXT TEXT, PASSWORDTXT TEXT)");
-        db.execSQL("CREATE TABLE RECORD(DATETXT TEXT, HEIGHTTXT INTEGER, WEIGHTTXT INTEGER, BMI INTEGER)");
-
+        db.execSQL("CREATE TABLE USER (NAMETXT TEXT PRIMARY KEY, DOBTXT TEXT, HEALTHCARDTXT TEXT, PASSWORDTXT TEXT)");
+        db.execSQL("CREATE TABLE RECORD (ID INTEGER PRIMARY KEY AUTOINCREMENT, DATETXT TEXT, HEIGHTTXT REAL, WEIGHTTXT REAL, BMI REAL)");
 
         Date today = new Date(); // we want to start with some initial data
         ContentValues personValues = new ContentValues();
@@ -45,6 +46,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         personValues.put("HEALTHCARDTXT", "1234");
         personValues.put("PASSWORDTXT", "qwerty");
         db.insert("USER",null, personValues);
+
         ContentValues recordValues = new ContentValues();
         recordValues.put("DATETXT","01/01/2018");
         recordValues.put("HEIGHTTXT",2);
@@ -59,6 +61,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS RECORD");
         onCreate(db);
     }
+
     //inserting registration data into database
     public boolean insert(String nameTxt, String dobTxt, String healthcardTxt, String passwordTxt){
         SQLiteDatabase db = this.getWritableDatabase();
@@ -86,7 +89,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return false;
     }
     //inserting BMI data into database
-    public boolean insertinrecord(String r1, Integer r2, Integer r3, Integer r4) {
+    public boolean insertinrecord(String r1, Float r2, Float r3, Float r4) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("DATETXT",r1);
