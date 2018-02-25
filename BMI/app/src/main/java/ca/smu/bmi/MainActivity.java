@@ -31,8 +31,8 @@ public class MainActivity extends AppCompatActivity {
         e3 = findViewById(R.id.healthcardTxt);
         e4 = findViewById(R.id.passwordTxt);
         e5 = findViewById(R.id.cpasswordTxt);
-        Button b1 = findViewById(R.id.registerBtn);
-        Button b2 = findViewById(R.id.loginBtn);
+        b1 = findViewById(R.id.registerBtn);
+        b2 = findViewById(R.id.loginBtn);
         b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
                 String s3 = e3.getText().toString();
                 String s4 = e4.getText().toString();
                 String s5 = e5.getText().toString();
-                if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")||s5.equals((""))){
+                if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")||s5.equals("")){
                     Toast.makeText(getApplicationContext(),"Fields are empty",Toast.LENGTH_SHORT).show();
                 }
                 else {

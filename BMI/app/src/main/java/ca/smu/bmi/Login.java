@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
         db = new DatabaseHelper(this);
         e1 = findViewById(R.id.editText);
         e2 = findViewById(R.id.editText2);
-        Button b1 = findViewById(R.id.button);
+        b1 = findViewById(R.id.button);
         b1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {

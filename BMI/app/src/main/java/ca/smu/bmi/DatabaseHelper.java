@@ -59,7 +59,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS RECORD");
         onCreate(db);
     }
-    //inserting into database
+    //inserting registration data into database
     public boolean insert(String nameTxt, String dobTxt, String healthcardTxt, String passwordTxt){
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
@@ -72,18 +72,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         else return true;
     }
     //checking if name exists
-    public Boolean checkname(String nameTxt){
+    public boolean checkname(String nameTxt){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE NAMETXT=?",new String[]{nameTxt});
         if(cursor.getCount()>0) return false;
         else return true;
     }
     //check the email and password
-    public Boolean namepassword(String nameTxt, String passwordTxt){
+    public boolean namepassword(String nameTxt, String passwordTxt){
         SQLiteDatabase db = this.getReadableDatabase();
         Cursor cursor = db.rawQuery("SELECT * FROM USER WHERE NAMETXT=? and PASSWORDTXT=?",new String[]{nameTxt,passwordTxt});
         if(cursor.getCount()>0) return true;
         else return false;
+    }
+    //inserting BMI data into database
+    public boolean insertinrecord(String r1, Integer r2, Integer r3, Integer r4) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("DATETXT",r1);
+        contentValues.put("HEIGHTTXT",r2);
+        contentValues.put("WEIGHTTXT",r3);
+        contentValues.put("BMI",r4);
+        long result = db.insert("RECORD", null, contentValues);
+        if(result==-1){
+            return false;
+        }
+        else {
+            return true;
+        }
     }
 
 /*    public boolean addData(String name) {

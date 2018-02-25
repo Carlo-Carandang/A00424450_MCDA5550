@@ -9,21 +9,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class Main2Activity extends AppCompatActivity {
 
+    DatabaseHelper db;
     TextView totalTextView;
-    EditText heightTxt;
-    EditText weightTxt;
+    EditText heightTxt, weightTxt, dateTxt;
+    Button calcBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main2);
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        db = new DatabaseHelper(this);
+
+/*        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -32,24 +36,40 @@ public class Main2Activity extends AppCompatActivity {
             }
         });
 */
-        totalTextView = findViewById(R.id.totalTextView);
+        dateTxt = findViewById(R.id.dateTxt);
         heightTxt = findViewById(R.id.heightTxt);
         weightTxt = findViewById(R.id.weightTxt);
+        totalTextView = findViewById(R.id.totalTextView);
 
-        Button calcBtn = findViewById(R.id.calcBtn);
+        calcBtn = findViewById(R.id.calcBtn);
         calcBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
                 String value = heightTxt.getText().toString();
                 Float heightAsInt = Float.parseFloat(value);
-
                 String value1 = weightTxt.getText().toString();
                 Float weightAsInt = Float.parseFloat(value1);
-
                 Float calc = (weightAsInt/(heightAsInt*heightAsInt));
-
                 totalTextView.setText(Float.toString((float) calc));
+
+                String r1 = dateTxt.getText().toString();
+                Integer r2 = Integer.parseInt(heightTxt.getText().toString());
+                Integer r3 = Integer.parseInt(weightTxt.getText().toString());
+                Integer r4 = Integer.parseInt(totalTextView.getText().toString());
+
+                if(r1.equals("")||r2.equals("")||r3.equals("")){
+                    Toast.makeText(getApplicationContext(),"Fields are empty",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    boolean ins = db.insertinrecord(r1,r2,r3,r4);
+                    if(ins==true){
+                        Toast.makeText(getApplicationContext(),"Successfully inserted into database",Toast.LENGTH_SHORT).show();
+                    }
+                    else {
+                        Toast.makeText(getApplicationContext(),"Not Inserted Into Database- Try Again", Toast.LENGTH_SHORT).show();
+                    }
+                }
 
 
 
