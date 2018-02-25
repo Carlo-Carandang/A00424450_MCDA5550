@@ -77,7 +77,7 @@ public final class R {
         public static final int blocking = 0x7f080023;
         public static final int cancel_action = 0x7f080028;
         public static final int chronometer = 0x7f08002e;
-        public static final int end_padder = 0x7f080045;
+        public static final int end_padder = 0x7f080046;
         public static final int forever = 0x7f080050;
         public static final int ghost_view = 0x7f080051;
         public static final int icon = 0x7f080056;

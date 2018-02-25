@@ -1,5 +1,6 @@
 package ca.smu.bmi;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -27,8 +28,11 @@ public class Login extends AppCompatActivity {
                 String nameTxt = e1.getText().toString();
                 String passwordTxt = e2.getText().toString();
                 Boolean checknamepass = db.namepassword(nameTxt,passwordTxt);
-                if(checknamepass==true)
-                    Toast.makeText(getApplicationContext(),"Login Successful",Toast.LENGTH_SHORT).show();
+                if(checknamepass==true) {
+                    Toast.makeText(getApplicationContext(), "Login Successful", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(Login.this, Main2Activity.class);
+                    startActivity(intent);
+                }
                 else
                     Toast.makeText(getApplicationContext(),"Wrong name or password",Toast.LENGTH_SHORT).show();
             }
