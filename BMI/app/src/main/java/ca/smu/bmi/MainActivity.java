@@ -19,8 +19,7 @@ public class MainActivity extends AppCompatActivity {
     DatabaseHelper db;
     Button b1, b2;
     EditText e1, e2, e3, e4, e5;
-/*    Button btnView;
-*/
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,8 +39,6 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
-/*        btnView = findViewById(R.id.btnView); */
 
         b1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -75,103 +72,7 @@ public class MainActivity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Password does not match",Toast.LENGTH_SHORT).show();
                     }
                 }
-
-
             }
         });
-
-/*       loginBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String newEntry = nameTxt.getText().toString();
-                if (nameTxt.length() != 0) {
-                    AddData(newEntry);
-                    nameTxt.setText(" ");
-                    Intent intent = new Intent(MainActivity.this, Main2Activity.class);
-                    startActivity(intent);
-
-                } */
-/*                else {
-                    Toast.makeText(MainActivity.this, "You must put something in the text field!", Toast.LENGTH_LONG).show();
-                }
-            }
-        });
-
-        btnView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(MainActivity.this, ListDataActivity.class);
-                startActivity(intent);
-            }
-        }); */
-
-
-
-/*        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-*/
     }
-
-/*    public void AddData(String newEntry) {
-        boolean insertData = myDB.addData(newEntry);
-
-        if (insertData==true){
-            Toast.makeText(MainActivity.this, "Successfully Entered Data!", Toast.LENGTH_LONG).show();
-        }else{
-            Toast.makeText(MainActivity.this, "Something went wrong :(", Toast.LENGTH_LONG).show();
-        }
-    }
-*/
-/*    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-*/
-
-/*    public void onClickEvent(View view){
-        {
-            EditText a = (EditText)findViewById()
-        }
-        Intent intent = new Intent(this, Main2Activity.class);
-        intent.putExtra()
-        startActivity(intent);
-
-
-        Intent intent = new Intent(MainActivity.this, ListDataActivity.class);
-        startActivity(intent);
-
-
-    }
-
-    public void onClick(View view) {
-        Intent intent = new Intent(this, ListDataActivity.class);
-        startActivity(intent);
-    }
-*/
 }

@@ -17,14 +17,6 @@ import java.util.Date;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
 
-/*    public static final String DATABASE_NAME = "mylist.db";
-    public static final String TABLE_NAME = "mylist_data";
-    public static final String COL1 = "ID";
-    public static final String COL2 = "NAME";
-    public static final String COL3 = "DOB";
-    public static final String COL4 = "HEALTH_NUM";
-    public static final String COL5 = "PASSWORD";
-*/
     //to prevent create table errors, increase the database version
     public DatabaseHelper(Context context) {
         super(context, "Login.db", null, 2);
@@ -34,8 +26,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
 /*        String createTable = "CREATE TABLE" + TABLE_NAME + " (ID INTEGER PRIMARY KEY AUTOINCREMENT, " +
                 "NAME TEXT, " + "DOB DATE, " + "HEALTH_NUM TEXT, " + "PASSWORD TEXT)"; */
-/*        db.execSQL("drop table if exists user");
-        db.execSQL("drop table if exists record"); */
+
         db.execSQL("CREATE TABLE USER (NAMETXT TEXT PRIMARY KEY, DOBTXT TEXT, HEALTHCARDTXT TEXT, PASSWORDTXT TEXT)");
         db.execSQL("CREATE TABLE RECORD (ID INTEGER PRIMARY KEY AUTOINCREMENT, DATETXT TEXT, HEIGHTTXT REAL, WEIGHTTXT REAL, BMI REAL)");
 
@@ -104,72 +95,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
-
-/*    public boolean addData(String name) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL2, name);
-
-        long result = db.insert(TABLE_NAME, null, contentValues);
-
-        //if date as inserted incorrectly it will return -1
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
-    } */
-/*
-    public boolean addData(String dob) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL3, dob);
-
-        long result = db.insert(TABLE_NAME, null, contentValues);
-
-        //if date as inserted incorrectly it will return -1
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    public boolean addData(String health_num) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL4, health_num);
-
-        long result = db.insert(TABLE_NAME, null, contentValues);
-
-        //if date as inserted incorrectly it will return -1
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-
-    public boolean addData(String password) {
-        SQLiteDatabase db = this.getWritableDatabase();
-        ContentValues contentValues = new ContentValues();
-        contentValues.put(COL5, password);
-
-        long result = db.insert(TABLE_NAME, null, contentValues);
-
-        //if date as inserted incorrectly it will return -1
-        if (result == -1) {
-            return false;
-        } else {
-            return true;
-        }
-    }
-*/
-    /* returns all the data from the database @return
-    public Cursor getListContents(){
-        SQLiteDatabase db = this.getWritableDatabase();
-        Cursor data = db.rawQuery("SELECT * FROM " + TABLE_NAME, null);
-        return data;
-    } */
-
 }
