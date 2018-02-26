@@ -48,18 +48,5 @@ public class ListDataActivity extends AppCompatActivity {
             }
             while (cursor.moveToNext()) ;
         }
-/*
-        ArrayList<String> theList = new ArrayList<>();
-        Cursor data = db.getListContents();
-
-        if(data.getCount() == 0){
-            Toast.makeText(ListDataActivity.this, "The Database was empty.", Toast.LENGTH_LONG).show();
-        } else {
-            while(data.moveToNext()){
-                theList.add(data.getString(1));
-                ListAdapter listAdapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1, theList);
-                listView.setAdapter(listAdapter);
-            }
-        } */
     }
 }

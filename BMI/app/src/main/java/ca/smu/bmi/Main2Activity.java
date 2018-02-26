@@ -26,18 +26,6 @@ public class Main2Activity extends AppCompatActivity {
         setContentView(R.layout.activity_main2);
         db = new DatabaseHelper(this);
 
-/*        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
-            }
-        });
-*/
         dateTxt = findViewById(R.id.dateTxt);
         heightTxt = findViewById(R.id.heightTxt);
         weightTxt = findViewById(R.id.weightTxt);
@@ -86,17 +74,8 @@ public class Main2Activity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Not Inserted Into Database- Try Again", Toast.LENGTH_SHORT).show();
                     }
                 }
-
             }
         });
-/*
-        button2 = findViewById(R.id.button2);
-        button2.setOnClickListener((view) {
-            Intent intent = new Intent(Main2Activity.this, ListDataActivity.class);
-            startActivity(intent);
-        });
-  */
-
     }
 
     public void displayRecords(View view)

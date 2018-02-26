@@ -1040,10 +1040,6 @@
         "source": "/Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/res/merged/debug/layout_row_layout.xml.flat",
-        "source": "/Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/res/layout/row_layout.xml"
-    },
-    {
         "merged": "/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/res/merged/debug/drawable_abc_ratingbar_small_material.xml.flat",
         "source": "/Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/e293d8d0a014bc4f346cfc3e67432528/res/drawable/abc_ratingbar_small_material.xml"
     },
