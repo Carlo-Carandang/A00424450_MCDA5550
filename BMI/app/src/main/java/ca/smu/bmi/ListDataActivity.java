@@ -38,13 +38,12 @@ public class ListDataActivity extends AppCompatActivity {
         {
             do {
                 String dateTxt,heightTxt,weightTxt,BMI;
-                dateTxt=cursor.getString(0);
-                heightTxt=cursor.getString(1);
-                weightTxt=cursor.getString(2);
-                BMI=cursor.getString(3);
+                dateTxt=cursor.getString(1);
+                heightTxt=cursor.getString(2);
+                weightTxt=cursor.getString(3);
+                BMI=cursor.getString(4);
                 DataProvider dataProvider = new DataProvider(dateTxt,heightTxt,weightTxt,BMI);
                 listAdapter.add(dataProvider);
-
             }
             while (cursor.moveToNext()) ;
         }
