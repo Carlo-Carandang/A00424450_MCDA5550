@@ -95,4 +95,34 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             return true;
         }
     }
+
+    public Cursor getAllData()
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        Cursor result=db.rawQuery("SELECT * FROM RECORD",null);
+        return result;
+    }
+
+    //updating password
+    public int UpdatePassword(String nameTxt, String passwordTxt) {
+
+        SQLiteDatabase db = this.getReadableDatabase();
+
+        // New value for password column
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("PASSWORDTXT", passwordTxt);
+
+        // Which row to update, based on the NAMETXT column
+        String selection = "NAMETXT = ?";
+        String[] selectionArgs = { String.valueOf(nameTxt) };
+
+        int count = db.update(
+                "RECORD",
+                contentValues,
+                selection,
+                selectionArgs);
+
+        //Return how many rows updated
+        return count;
+    }
 }

@@ -9,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,7 +18,7 @@ public class Main2Activity extends AppCompatActivity {
     DatabaseHelper db;
     TextView totalTextView;
     EditText heightTxt, weightTxt, dateTxt;
-    Button calcBtn;
+    Button calcBtn,button2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,12 +86,22 @@ public class Main2Activity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Not Inserted Into Database- Try Again", Toast.LENGTH_SHORT).show();
                     }
                 }
+
             }
         });
-    }
 /*
-    public void displayProducts(View view)
+        button2 = findViewById(R.id.button2);
+        button2.setOnClickListener((view) {
+            Intent intent = new Intent(Main2Activity.this, ListDataActivity.class);
+            startActivity(intent);
+        });
+  */
+
+    }
+
+    public void displayRecords(View view)
     {
-        startActivity(new Intent(this,ListDataActivity.class));
-    } */
+        Intent intent=new Intent(getApplicationContext(),ListDataActivity.class);
+        startActivity(intent);
+    }
 }
