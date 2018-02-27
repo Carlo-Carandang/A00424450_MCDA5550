@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
+ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [com.android.support:design:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ac7fbb54af38b7a632b8036cd53d2f6d/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/e293d8d0a014bc4f346cfc3e67432528/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support.constraint:constraint-layout:1.0.2] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/constraint-layout-1.0.2.aar/b009f35ea4c429de4bd43f80c768f359/AndroidManifest.xml:2:1-11:12
@@ -18,25 +18,25 @@ MERGED from [com.android.support:support-core-utils:26.1.0] /Users/carlocarandan
 MERGED from [com.android.support:support-core-ui:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/support-core-ui-26.1.0.aar/7b2bc43a0431be96c2943ab3b8ccc0eb/AndroidManifest.xml:17:1-31:12
 MERGED from [com.android.support:support-compat:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/support-compat-26.1.0.aar/785d0da89672255ef498b5c0459f31be/AndroidManifest.xml:17:1-31:12
 MERGED from [android.arch.lifecycle:runtime:1.0.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/runtime-1.0.0.aar/fdd0fcbd1785c9d9d57a9d965bd21382/AndroidManifest.xml:17:1-30:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
-INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
 	package
 		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:3:5-25
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
 	android:versionName
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
-		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
 	android:versionCode
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
-		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-31:12
+		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:1-32:12
 		INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml
 	xmlns:android
 		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:5:5-29:19
+ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:5:5-30:19
 MERGED from [com.android.support:design:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ac7fbb54af38b7a632b8036cd53d2f6d/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:design:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/design-26.1.0.aar/ac7fbb54af38b7a632b8036cd53d2f6d/AndroidManifest.xml:25:5-29:19
 MERGED from [com.android.support:appcompat-v7:26.1.0] /Users/carlocarandang/.gradle/caches/transforms-1/files-1.1/appcompat-v7-26.1.0.aar/e293d8d0a014bc4f346cfc3e67432528/AndroidManifest.xml:25:5-29:19
@@ -112,9 +112,13 @@ ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidM
 	android:name
 		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:27:19-51
 activity#ca.smu.bmi.Login
-ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:28:9-52
+ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:28:9-43
 	android:name
 		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:28:19-40
+activity#ca.smu.bmi.ChangePasswordActivity
+ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:29:9-69
+	android:name
+		ADDED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml:29:19-57
 uses-sdk
 INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/carlocarandang/AndroidStudioProjects/BMI/app/src/main/AndroidManifest.xml

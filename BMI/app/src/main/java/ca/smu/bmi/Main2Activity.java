@@ -18,7 +18,7 @@ public class Main2Activity extends AppCompatActivity {
     DatabaseHelper db;
     TextView totalTextView;
     EditText heightTxt, weightTxt, dateTxt;
-    Button calcBtn,button2;
+    Button calcBtn,changeBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -74,6 +74,15 @@ public class Main2Activity extends AppCompatActivity {
                         Toast.makeText(getApplicationContext(),"Not Inserted Into Database- Try Again", Toast.LENGTH_SHORT).show();
                     }
                 }
+            }
+        });
+
+        changeBtn = findViewById(R.id.changeBtn);
+        changeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Main2Activity.this,ChangePasswordActivity.class);
+                startActivity(intent);
             }
         });
     }

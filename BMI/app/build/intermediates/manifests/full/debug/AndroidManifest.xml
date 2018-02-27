@@ -34,6 +34,7 @@
         <activity android:name="ca.smu.bmi.BMIListActivity" />
         <activity android:name="ca.smu.bmi.ListDataActivity" />
         <activity android:name="ca.smu.bmi.Login" />
+        <activity android:name="ca.smu.bmi.ChangePasswordActivity" />
 
         <meta-data
             android:name="android.support.VERSION"

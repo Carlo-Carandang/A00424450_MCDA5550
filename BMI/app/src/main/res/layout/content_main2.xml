@@ -10,7 +10,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="344dp"
+        android:layout_height="389dp"
         android:orientation="vertical"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="2dp">
@@ -74,9 +74,15 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#FFFF4081"
-            android:text="View My BMI History"
             android:onClick="displayRecords"
-            />
+            android:text="View My BMI History" />
+
+        <Button
+            android:id="@+id/changeBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/colorAccent"
+            android:text="Change Password" />
 
     </LinearLayout>
 

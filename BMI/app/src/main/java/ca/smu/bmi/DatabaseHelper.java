@@ -105,7 +105,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     //updating password
     public int UpdatePassword(String nameTxt, String passwordTxt) {
-
         SQLiteDatabase db = this.getReadableDatabase();
 
         // New value for password column
@@ -116,11 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String selection = "NAMETXT = ?";
         String[] selectionArgs = { String.valueOf(nameTxt) };
 
-        int count = db.update(
-                "RECORD",
-                contentValues,
-                selection,
-                selectionArgs);
+        int count = db.update("RECORD", contentValues, selection, selectionArgs);
 
         //Return how many rows updated
         return count;
