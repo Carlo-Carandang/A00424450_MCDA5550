@@ -115,7 +115,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String selection = "NAMETXT = ?";
         String[] selectionArgs = { String.valueOf(nameTxt) };
 
-        int count = db.update("RECORD", contentValues, selection, selectionArgs);
+        int count = db.update("USER", contentValues, selection, selectionArgs);
 
         //Return how many rows updated
         return count;

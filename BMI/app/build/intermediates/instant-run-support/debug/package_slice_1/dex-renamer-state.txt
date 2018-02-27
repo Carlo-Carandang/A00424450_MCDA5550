@@ -1,4 +1,4 @@
-#Tue Feb 27 01:29:11 AST 2018
+#Tue Feb 27 01:49:09 AST 2018
 base.0=/Users/carlocarandang/AndroidStudioProjects/BMI/app/build/intermediates/transforms/dexMerger/debug/77
 path.0=classes.dex
 renamed.0=classes.dex
